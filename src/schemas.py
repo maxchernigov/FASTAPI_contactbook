@@ -28,7 +28,7 @@ class UserResponse(UserBase):
 
 
 class LoginModel(BaseModel):
-    user_name: str = Field(min_length=5, max_length=16)
+    username: str = Field(min_length=5, max_length=16)
     email: str
     password: str = Field(min_length=6, max_length=10)
 
