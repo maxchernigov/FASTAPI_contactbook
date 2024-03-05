@@ -16,7 +16,7 @@ class UserUpdate(UserBase):
     pass
 
 
-class UserResponse():
+class UserResponse(UserBase):
     id: int
     email: EmailStr
     phone: PhoneNumber
@@ -24,7 +24,7 @@ class UserResponse():
     data: str = None
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class LoginModel(BaseModel):
@@ -41,7 +41,7 @@ class LoginDb(BaseModel):
     avatar: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class LoginResponse(BaseModel):
